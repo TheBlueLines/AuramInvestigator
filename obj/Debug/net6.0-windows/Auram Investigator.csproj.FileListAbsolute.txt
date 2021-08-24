@@ -1,0 +1,21 @@
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\Auram Investigator.exe
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\Auram Investigator.deps.json
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\Auram Investigator.runtimeconfig.json
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\Auram Investigator.dll
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\ref\Auram Investigator.dll
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\Auram Investigator.pdb
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.csproj.AssemblyReference.cache
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram_Investigator.Form1.resources
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.csproj.GenerateResource.cache
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.AssemblyInfoInputs.cache
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.AssemblyInfo.cs
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.csproj.CoreCompileInputs.cache
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.dll
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\ref\Auram Investigator.dll
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.pdb
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.genruntimeconfig.cache
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\Auram.dll
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\bin\Debug\net6.0-windows\Auram.pdb
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram Investigator.csproj.CopyComplete
+C:\Users\David\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\source\repos\Auram Investigator\obj\Debug\net6.0-windows\Auram_Investigator.Properties.Resources.resources
