@@ -1,18 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using Auram;
-using static System.Net.WebRequestMethods;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Auram_Investigator
 {
@@ -23,30 +15,26 @@ namespace Auram_Investigator
             public int index, depth;
             public string text;
             public Dictionary<string, TreeBuilder> childs;
-            public void addToTreeVeiw(System.Windows.Forms.TreeNode root, TreeBuilder tb)
+            public void addToTreeVeiw(TreeNode root, TreeBuilder tb)
             {
                 foreach (string key in tb.childs.Keys)
                 {
-                    System.Windows.Forms.TreeNode t = root.Nodes.Add(tb.childs[key].text);
+                    TreeNode t = root.Nodes.Add(tb.childs[key].text);
                     addToTreeVeiw(t, tb.childs[key]);
-
                 }
             }
         }
         private string current = string.Empty;
         private string path = string.Empty;
-        private Color focusColor = Color.DimGray;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
         private bool mouseIsDown;
         private Point firstPoint;
         private Dictionary<string, string> data = new();
-        private List<string> list = new();
         public Form1(string file)
         {
             current = file;
             InitializeComponent();
-            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             Exit.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Exit.Width, Exit.Height, 5, 5));
             LoadBase();
@@ -55,7 +43,7 @@ namespace Auram_Investigator
         {
             try
             {
-                Database.LoadDatabase(current);
+                Database.Load(current);
                 data = Database.data;
             }
             catch
@@ -111,19 +99,17 @@ namespace Auram_Investigator
             firstPoint = e.Location;
             mouseIsDown = true;
         }
-
         private void Titlebar_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseIsDown)
             {
                 int xDiff = firstPoint.X - e.Location.X;
                 int yDiff = firstPoint.Y - e.Location.Y;
-                int x = this.Location.X - xDiff;
-                int y = this.Location.Y - yDiff;
-                this.Location = new Point(x, y);
+                int x = Location.X - xDiff;
+                int y = Location.Y - yDiff;
+                Location = new Point(x, y);
             }
         }
-
         private void Titlebar_MouseUp(object sender, MouseEventArgs e)
         {
             mouseIsDown = false;
@@ -132,17 +118,14 @@ namespace Auram_Investigator
         {
             Exit.BackColor = Color.Red;
         }
-
         private void Exit_MouseLeave(object sender, EventArgs e)
         {
             Exit.BackColor = BackColor;
         }
-
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void Viewer_AfterSelect(object sender, TreeViewEventArgs e)
         {
             try
@@ -150,12 +133,9 @@ namespace Auram_Investigator
                 path = Viewer.SelectedNode.FullPath.Replace(Path.DirectorySeparatorChar, '/');
                 if (path.StartsWith("Database/"))
                 {
-                    TXT.Text = path[9..] + " » " + data[path];
+                    path = path[9..];
                 }
-                else
-                {
-                    TXT.Text = path + " » " + data[path];
-                }
+                TXT.Text = path + " » " + data[path];
             }
             catch
             {
@@ -176,11 +156,11 @@ namespace Auram_Investigator
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (Control.ModifierKeys == Keys.Control)
+            if (ModifierKeys == Keys.Control)
             {
                 if (e.KeyCode == Keys.S)
                 {
-                    Database.SaveDatabase(current);
+                    Database.Save(current);
                 }
                 if (e.KeyCode == Keys.O)
                 {
@@ -188,23 +168,23 @@ namespace Auram_Investigator
                 }
                 if (e.KeyCode == Keys.N)
                 {
-                    Database.ClearDatabase();
+                    Database.Clear();
                     Viewer.Nodes.Clear();
                 }
                 if (e.KeyCode == Keys.W)
                 {
-                    this.Close();
+                    Close();
                 }
             }
-            else if (Control.ModifierKeys == Keys.F5)
+            else if (ModifierKeys == Keys.F5)
             {
-                Database.ClearDatabase();
+                Database.Clear();
                 Viewer.Nodes.Clear();
                 LoadBase();
             }
-            else if (Control.ModifierKeys == Keys.Delete)
+            else if (ModifierKeys == Keys.Delete)
             {
-                Database.RemoveFromDatabase(path);
+                Database.Remove(path);
                 Viewer.Nodes.RemoveByKey(path);
             }
         }

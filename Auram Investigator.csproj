@@ -6,12 +6,14 @@
     <RootNamespace>Auram_Investigator</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>Auram_Investigator.Program</StartupObject>
+    <NoWin32Manifest>true</NoWin32Manifest>
     <ApplicationIcon>C:\Users\David\OneDrive\Installers\Pictures\Database.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="Auram">
-      <HintPath>..\Auram\bin\Debug\net5.0\Auram.dll</HintPath>
+      <HintPath>..\Auram\bin\Debug\net6.0\Auram.dll</HintPath>
     </Reference>
   </ItemGroup>
 

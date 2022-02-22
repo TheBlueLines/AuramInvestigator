@@ -29,6 +29,7 @@ namespace Auram_Investigator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Titlebar = new System.Windows.Forms.Panel();
             this.Exit = new System.Windows.Forms.Panel();
             this.Viewer = new System.Windows.Forms.TreeView();
@@ -116,8 +117,10 @@ namespace Auram_Investigator
             this.Controls.Add(this.Viewer);
             this.Controls.Add(this.Titlebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Main";
+            this.Text = "Investigator";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.Titlebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
